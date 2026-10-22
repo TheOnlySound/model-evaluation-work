@@ -1,0 +1,40 @@
+Dataset: eval_set.csv (40 graded responses)
+A response passes only if it meets all criteria: tool_called, no_url, no_markdown, concise, sounds_natural
+
+RESULTS BY MODEL AND PROMPT
+Model     Prompt    Full pass  Tool  No URL  No MD  Concise  Natural  Errors  Mean latency  Max latency
+gpt-4.1   current   2/10       10    3       4      6        3        0       4.82          11.87
+gpt-4o    current   1/10       10    2       2      6        3        0       4.61          6.59
+gpt-4.1   v2        8/10       10    10      10     9        8        0       3.20          4.67
+gpt-4o    v2        8/10       10    10      10     9        8        0       3.33          3.96
+
+FULL-PASS RATE BY PROMPT (all models)
+current   3/20 (15%)
+v2        16/20 (80%)
+
+NON-ENGLISH FULL PASSES BY PROMPT
+current   1/8
+v2        7/8
+
+FAILED RESPONSES
+gpt-4.1   current   W03-en    failed: no_url, no_markdown, concise, sounds_natural
+gpt-4.1   current   W04-en    failed: no_url, no_markdown, concise, sounds_natural
+gpt-4.1   current   W05-en    failed: no_url, no_markdown, concise, sounds_natural
+gpt-4.1   current   W06-yo    failed: no_url, no_markdown
+gpt-4.1   current   W07-ha    failed: no_url, no_markdown, concise, sounds_natural
+gpt-4.1   current   W08-ig    failed: sounds_natural
+gpt-4.1   current   W09-pcm   failed: no_url, no_markdown, sounds_natural
+gpt-4.1   current   W10-en    failed: no_url, sounds_natural
+gpt-4o    current   W01-en    failed: no_url, no_markdown, sounds_natural
+gpt-4o    current   W02-en    failed: no_url, no_markdown, sounds_natural
+gpt-4o    current   W03-en    failed: no_url, no_markdown, sounds_natural
+gpt-4o    current   W04-en    failed: concise, sounds_natural
+gpt-4o    current   W05-en    failed: no_url, no_markdown, concise, sounds_natural
+gpt-4o    current   W06-yo    failed: no_url, no_markdown
+gpt-4o    current   W07-ha    failed: no_url, no_markdown, concise, sounds_natural
+gpt-4o    current   W09-pcm   failed: no_url, no_markdown
+gpt-4o    current   W10-en    failed: no_url, no_markdown, concise, sounds_natural
+gpt-4.1   v2        W05-en    failed: sounds_natural
+gpt-4.1   v2        W06-yo    failed: concise, sounds_natural
+gpt-4o    v2        W04-en    failed: concise, sounds_natural
+gpt-4o    v2        W05-en    failed: sounds_natural
