@@ -1,0 +1,27 @@
+Dataset: dataset2.csv (40 graded responses)
+A response passes only if it meets all criteria: tool_called, no_url, no_markdown, concise, sounds_natural
+
+RESULTS BY MODEL AND PROMPT
+Model     Prompt    Full pass  Tool  No URL  No MD  Concise  Natural  Errors  Mean latency  Max latency
+gpt-4.1   v2        7/10       9     8       8      8        8        1       4.41          15.00
+gpt-4o    v2        7/10       9     10      10     9        8        0       3.13          3.87
+gpt-4.1   v3        9/10       10    10      10     9        10       0       2.88          3.69
+gpt-4o    v3        9/10       10    10      10     10       9        0       2.88          3.13
+
+FULL-PASS RATE BY PROMPT (all models)
+v2        14/20 (70%)
+v3        18/20 (90%)
+
+NON-ENGLISH FULL PASSES BY PROMPT
+v2        6/8
+v3        7/8
+
+FAILED RESPONSES
+gpt-4.1   v2        W12 - en  failed: no_url, no_markdown
+gpt-4.1   v2        W15 - en  failed: concise, sounds_natural
+gpt-4.1   v2        W19 - pcm error: timeout
+gpt-4o    v2        W14 - en  failed: tool_called
+gpt-4o    v2        W18 - ig  failed: sounds_natural
+gpt-4o    v2        W20 - en  failed: concise, sounds_natural
+gpt-4.1   v3        W15 - en  failed: concise
+gpt-4o    v3        W17 - ha  failed: sounds_natural

@@ -1,1 +1,1 @@
-A repo to evaluate models against a variety of African languages
+This is a model evaluation Repo to evaluate models.
